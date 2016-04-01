@@ -1,0 +1,8 @@
+<template name="postPage">
+	<h2>{{title}}</h2>
+	{{#with FS.GetFile "images" thumbnail}} 
+		<img src="{{this.url store='thumbnail'}}" class="panel-image-preview thumbnail" style="width: 300px;"/> 
+	{{/with}}
+	<p>{{{body}}}</p>
+	<p>by {{author}}</p> 
+</template>
